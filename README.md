@@ -3,19 +3,19 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## URL Details
-• Node.JS API project – todoapp\API
-• Node.JS Base URL: http://localhost:5000/api
-• Angular project – todoapp
-• Angular base URL: http://localhost:4200
-• Database Name: tasksdb
-• MongoDB URL: mongodb://localhost:27017/tasksdb 
+• Node.JS API project – todoapp\API  
+• Node.JS Base URL: http://localhost:5000/api  
+• Angular project – todoapp  
+• Angular base URL: http://localhost:4200  
+• Database Name: tasksdb  
+• MongoDB URL: mongodb://localhost:27017/tasksdb   
 
 
 ## Steps to run the app:  
-o	Todoapp\API> Npm install 
-o	Todoapp> npm install
-o	Todoapp\API> node server
-o	Todoapp> ng serve
+o	Todoapp\API> Npm install   
+o	Todoapp> npm install  
+o	Todoapp\API> node server  
+o	Todoapp> ng serve 
 
 ## Development server
 
