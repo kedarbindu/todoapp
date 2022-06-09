@@ -20,7 +20,7 @@ export class TodoCreateComponent implements OnInit {
     private todoApiService: TodoApiService
   ) {
     this.mainForm();
-   }
+  }
 
   ngOnInit() {
   }
@@ -35,7 +35,7 @@ export class TodoCreateComponent implements OnInit {
   }
 
   // Getter to access form control
-  get myForm(){
+  get myForm() {
     return this.todoForm.controls;
   }
 
@@ -45,6 +45,7 @@ export class TodoCreateComponent implements OnInit {
       return false;
     } else {
       this.todoForm.value.Done = false;
+      this.dateDiff(this.todoForm.value.DueDate);                            //Call date diff function
       this.todoApiService.createTask(this.todoForm.value).subscribe(
         (res) => {
           console.log('Task successfully created!')
@@ -53,5 +54,14 @@ export class TodoCreateComponent implements OnInit {
           console.log(error);
         });
     }
+  }
+
+  //Find difference between 2 dates
+  dateDiff(dueDate) {
+    var currentDate = new Date();
+    var newDueDate = new Date(dueDate);
+    var diff = Math.abs(newDueDate.getTime() - currentDate.getTime());
+    var diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+    console.log("Date difference between task's due date and current date is - ", diffDays);
   }
 }

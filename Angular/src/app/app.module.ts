@@ -9,12 +9,17 @@ import { AppComponent } from './app.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoCreateComponent } from './components/todo-create/todo-create.component';
 import { TodoApiService } from './service/todo-api.service';
+import { WeeklyRecurringTaskCreateComponent } from './components/weekly-recurring-task-create/weekly-recurring-task-create.component';
+import { WeeklyrecurringtaskApiService } from './service/weeklyrecurringtask-api.service';
+import { WeeklyRecurringTaskListComponent } from './components/weekly-recurring-task-list/weekly-recurring-task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     TodoCreateComponent,
+    WeeklyRecurringTaskCreateComponent,
+    WeeklyRecurringTaskListComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,9 @@ import { TodoApiService } from './service/todo-api.service';
     ReactiveFormsModule
   ],
   providers: [
-    TodoApiService
+    TodoApiService,
+    WeeklyrecurringtaskApiService,
+    WeeklyRecurringTaskListComponent
   ],
   bootstrap: [AppComponent]
 })
