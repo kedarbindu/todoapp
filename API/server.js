@@ -20,15 +20,18 @@ mongoose.connect(dbConfig, {
 
 // Setting up port with express js
 const taskRoute = require('../API/tasks.controller')
+const weeklyRecurringTasksRoutes = require('../API/weeklyRecurringTasks.controller')
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
    extended: false
 }));
+
 app.use(cors()); 
 app.use(express.static(path.join(__dirname, 'dist/todoapp')));
 app.use('/', express.static(path.join(__dirname, 'dist/todoapp')));
 app.use('/api', taskRoute)
+app.use('/api',weeklyRecurringTasksRoutes)
 
 // Create port
 const port = process.env.PORT || apiPortNumber;
